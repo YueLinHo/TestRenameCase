@@ -184,3 +184,4 @@ The story is not finish...
 
 What if I want to keep both file?
 
+What if one user add abc on his own branch and other one user add Abc on his own branch? (abc and Abc is a different content)
