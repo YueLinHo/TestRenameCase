@@ -23,13 +23,15 @@ Check log (NOTE: status of Abc.txt is ```Added```, not rename)
 
 ![](/Image/05_Log2.png)
 
+### If core.ignorecase = false in Windows... ###
+
 Create test branch and checkout it
+
+**Problem here:** file is not checkout, the status is ```Deleted```
 
 ![](/Image/06_Create_Branch_+_Switch.png)
 
-*Problem here:* file is not checkout, the status is ```Deleted```, so Revert it.
-
-Then, abc.txt in working tree:
+So Revert it. Then, abc.txt in working tree:
 
 ![](/Image/07_After_Revert.png)
 
@@ -93,29 +95,35 @@ set back
 
 ![](/Image/20_set_ignorecase_true.png)
 
-Delete the file and the log
+Delete the files and the log
 
 ![](/Image/21_Delete_and_Log.png)
 
 Reset hard again
 
-*Problem here:* abc.txt is checkout, not Abc.txt.
+**Problem 1:** abc.txt is checkout, but Abc.txt is not.
+
+**Problem 2:** working dir changes is clean
 
 ![](/Image/22_Reset_hard.png)
 
-Delete the file again.
+Delete the files again.
 
 ![](/Image/23_Delete_again.png)
 
-Rvert Abc.txt
+Revert Abc.txt
 
 ![](/Image/24_Revert.png)
 
-The Result: (wait a minute)
+The Result: (but see next step)
 
 ![](/Image/25_After_Revert.png)
 
 Press F5 to refresh:
+
+**Problem 1:** still one is working tree, the other one is gone.
+
+**Problem 2:** working dir changes is clean
 
 ![](/Image/26_After_Refresh.png)
 
@@ -172,5 +180,7 @@ Merge OK.
 ![](/Image/39_Merge_result.png)
 
 
+The story is not finish...
 
+What if I want to keep both file?
 
